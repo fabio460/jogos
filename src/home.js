@@ -1,18 +1,17 @@
-
-import './App.css';
+import React from "react";
 import {useEffect, useState} from 'react';
 import api from './api';
 import Jogo from './jogo';
-import React from 'react';
 
-function App() {
-  const [list,setList] = useState([]);
+function Home(){
+    const [list,setList] = useState([]);
   var generos=["","horror","anime","racing","zombie","2d","social","fantasy","shooter","battle-royale",
     "action","strategy","sports","action-rpg","first-person","fighting","superhero","sci-fi","space","third-Person"]
   useEffect(()=>{ 
    async function carregar(){
       let l =await api.ListarJogos();
       setList(l);
+      
     }
     carregar();
   },[]);
@@ -26,11 +25,9 @@ function App() {
      setList(l);
   }
   
-  return (
-    <div className="container">
-      <header ><h1>header</h1> </header>
-     
-            <article>
+  
+    return<>
+     <article>
           <nav id='nav'>
             
             <ul className="ul">
@@ -61,11 +58,6 @@ function App() {
             })}
           </section>
       </article>
-           
-      
-      <footer>© 2021 RapidAPI. Todos os direitos reservados. Fonte de dados: FreeToGame.com</footer>
-    </div>
-  );
+    </>
 }
-
-export default App;
+export default Home;

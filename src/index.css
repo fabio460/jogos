@@ -10,15 +10,47 @@ body {
 section{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
+  
+}
+article{
+  display: flex;
+
+}
+nav{
+  
+  width: 20%;
 }
 .bloco_jogo{
   box-shadow: black 1px 2px 0.8px;
+
+}
+.bloco_jogo img{
+  width: 100%;
+  margin: auto;
+}
+footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+li{
+  cursor: pointer;
+  margin: 5px;
+  list-style: none;
+}
+ul{
+  border-right: black solid 1px;
+  margin-right: 20px;
+}
+li:hover{
+  color: coral;
 }
 @media (max-width:400px) {
   section{
-  
     grid-template-columns: 1fr;
-    
+  }
+  nav{
+    display: none;
   }
 }
