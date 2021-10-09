@@ -23,7 +23,7 @@ nav{
 }
 .bloco_jogo{
   box-shadow: black 1px 2px 0.8px;
-
+  cursor: pointer;
 }
 .bloco_jogo img{
   width: 100%;
@@ -45,6 +45,50 @@ ul{
 }
 li:hover{
   color: coral;
+}
+.voltar{
+  cursor: pointer;
+}
+.selectContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 100px;
+  gap: 50px;
+}
+.selectContainer img{
+  width: 100%;
+}
+.btn_select{
+  
+  min-width: 100px;
+  height: 40px;
+  color: white;
+  padding: 5px 20px;
+  cursor: pointer;
+  
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_jogar{
+  background-color: red;
+  margin-left: 100px;
+}
+.btn_voltar{
+  background-color: blue;
+}
+.btn{
+  display: flex;
+  
+  margin-top: 70px;
+}
+.btn_select a{
+  text-decoration: none;
+  color: white;
+}
+.home{
+  margin: 30px;
 }
 @media (max-width:400px) {
   section{

@@ -6,6 +6,7 @@ import Jogo from './jogo';
 import React from 'react';
 
 function App() {
+  
   const [list,setList] = useState([]);
   var generos=["","horror","anime","racing","zombie","2d","social","fantasy","shooter","battle-royale",
     "action","strategy","sports","action-rpg","first-person","fighting","superhero","sci-fi","space","third-Person"]
@@ -13,6 +14,7 @@ function App() {
    async function carregar(){
       let l =await api.ListarJogos();
       setList(l);
+      
     }
     carregar();
   },[]);
@@ -28,7 +30,7 @@ function App() {
   
   return (
     <div className="container">
-      <header ><h1>header</h1> </header>
+      
      
             <article>
           <nav id='nav'>
@@ -57,7 +59,7 @@ function App() {
           </nav>
           <section>
             {list.map((item,key)=>{
-              return <Jogo title={item.title} thumbnail={item.thumbnail} genre={item.genre} key={key}/>
+              return <Jogo title={item.title} thumbnail={item.thumbnail} genre={item.genre} key={key} objeto={item}/>
             })}
           </section>
       </article>
