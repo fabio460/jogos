@@ -5,6 +5,7 @@ import api from './api';
 import Jogo from './jogo';
 import React from 'react';
 
+
 function App() {
   
   const [list,setList] = useState([]);
@@ -28,10 +29,9 @@ function App() {
      setList(l);
   }
   
-  return (
-    <div className="container">
-      
-     
+  return <>
+  
+    <div className="container"> 
             <article>
           <nav id='nav'>
             
@@ -67,7 +67,6 @@ function App() {
       
       <footer>© 2021 RapidAPI. Todos os direitos reservados. Fonte de dados: FreeToGame.com</footer>
     </div>
-  );
+  </>
 }
-
 export default App;
