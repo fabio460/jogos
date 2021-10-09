@@ -16,7 +16,7 @@ function Jogo({title,thumbnail,genre,objeto}){
        <div onClick={mostrarSelect} className='bloco_jogo'>
          <div className='titulo'>{title}</div>
          <img src={thumbnail} alt=''/>
-         <div>{genre}</div>
+         
        </div>
     </>
 }
