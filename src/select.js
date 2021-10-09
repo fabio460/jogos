@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router";
 import {useSelector} from 'react-redux';
 function Select(){
@@ -6,10 +6,21 @@ function Select(){
     const obj = useSelector(state=>state.jogo.lista);
     
     let voltar = ()=>{
-        h.push('/');
+        console.log(obj.title)
+        if (obj.title) {
+            h.push('/');
+        }
+        else{
+            h.push('/select');
+        }
         
     }
-   
+    useEffect(()=>{
+        if (!obj.title) {
+            h.push('/');
+        }
+        
+    })
     return <>
         <div className='selectContainer'>
             <img src={obj.thumbnail} alt=''/>
