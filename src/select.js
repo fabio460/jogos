@@ -7,13 +7,7 @@ function Select(){
     
     let voltar = ()=>{
         console.log(obj.title)
-        if (obj.title) {
             h.push('/');
-        }
-        else{
-            h.push('/select');
-        }
-        
     }
     useEffect(()=>{
         if (!obj.title) {
